@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ReactGa from "react-ga";
 import Iframe from "react-iframe";
+import React from "react";
 
 /* Component to sing out the user */
 export default function DashboardWrapper({ children }) {
