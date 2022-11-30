@@ -73,17 +73,13 @@ export default function Dashboard() {
         <a className="dashboardSiderItem" onClick={handleOnClick}><img className="pushLogo" src={pushLogo} alt="pushLogo"/>Push</a>
         </div>
       </div>
-        <DashboardWrapper />
+        <DashboardWrapper children={undefined} />
       </div>
       <div className="dashboardView">
         <Iframe className="iframe"
-          width="100%"
-  
-          src="https://datastudio.google.com/embed/reporting/201e21d7-2005-44cb-8d09-e6b0827521db/page/1M"
-          frameborder="0"
-          style="border:0"
-          allowfullscreen
-        ></Iframe>
+        width="100%"
+
+        src="https://datastudio.google.com/embed/reporting/201e21d7-2005-44cb-8d09-e6b0827521db/page/1M" url={""}        ></Iframe>
       </div>
     </div>
   );

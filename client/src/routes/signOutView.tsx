@@ -14,7 +14,11 @@ export default function SignOutView () {
     await logout();
     navigate ('/');
     localStorage.removeItem('token');
-    window.location.reload(false);
+    let loc = window.location;
+    /* the loc var will take a bollean value */
+
+    /*False must be the default parameter for the function */
+    loc.reload();
   }
 
   /* If the user is not registered in, navigate to the login page */
