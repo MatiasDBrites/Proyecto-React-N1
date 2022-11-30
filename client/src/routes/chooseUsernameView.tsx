@@ -14,7 +14,13 @@ export default function ChooseUsernameView () {
   
   const navigate = useNavigate();
   const [state, setState] = useState(0);
-  const [currentUser, setCurrentUser] = useState({});
+  const [currentUser, setCurrentUser] = useState({
+    username: "",
+    email: "",
+    processCompleted: false,
+    displayName: "",
+    uid : ""
+  });
   const [username, setUsername] = useState('');
 
   /* When the user is logged in navigate to the dashboard */
@@ -51,6 +57,7 @@ export default function ChooseUsernameView () {
         setState(5);
       } else {
         const tmp = {...currentUser};
+       
         tmp.username = username;
         tmp.processCompleted = true;
         await updateUser(tmp);
@@ -67,8 +74,10 @@ export default function ChooseUsernameView () {
         <p>Para Terminar el proceso elige un nombre de Usuario</p>
         {state === 5 ? <p>El nombre de usuario ya existe, escoge otro</p> : ''}
         <div>
-          <input className="choooseUserName_input" type='text' onInput={handleInputUsername}>
-          </input>
+          <input className="choooseUserName_input" type='text'
+            placeholder='Nombre de Usuario'
+            onChange={handleInputUsername}
+          />
         </div>
         <div>
           <button onClick={handleContinue}>
