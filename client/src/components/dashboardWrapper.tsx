@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ReactGa from "react-ga";
 
 
+
 /* Component to sing out the user written in TypeScript */
 /* the children component was be moved to the dashboardWrapper and be replaced by a props*/
 export default function DashboardWrapper(props: any) {
