@@ -18,7 +18,8 @@ export default function ChooseUsernameView () {
     username: "",
     email: "",
     processCompleted: false,
-    displayName: ""
+    displayName: "",
+    uid : ""
   });
   const [username, setUsername] = useState('');
 
