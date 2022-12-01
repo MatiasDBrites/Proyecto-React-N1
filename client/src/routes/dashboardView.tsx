@@ -73,6 +73,7 @@ export default function Dashboard() {
         <a className="dashboardSiderItem" onClick={handleOnClick}><img className="pushLogo" src={pushLogo} alt="pushLogo"/>Push</a>
         </div>
       </div>
+
         <DashboardWrapper children={null} />
       </div>
       <div className="dashboardView">
